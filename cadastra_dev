@@ -1,0 +1,21 @@
+<?php
+    require("conecta.php");
+
+    $nome = $_POST['nome'];
+    $desenvolvedor =  $_POST['desenvolvedor'];
+    $empresa = $_POST['empresa'];
+    $cadjogos = $_POST['cadjogos'];
+    #$classificação = $_POST['classificação'];
+    #$genero = $_POST['genero'];
+    $objetivo = $_POST['objetivo'];
+
+    $sql = "INSERT INTO dev (nome, desenvolvedor, empresa, cadjogos, classificação, genero, objetivo)
+    VALUES ('$nome', '$desenvolvedor', '$empresa', '$cadjogos', 'classificação', 'genero', '$objetivo')";
+
+    if ($conn->query($sql) === TRUE) {
+      echo "<center><h1>Registro Inserido com Sucesso</h1>";
+      echo "<a href='index.html'><input type='button' value='Voltar'></a></center>";
+    } else {
+      echo "<h3>OCORREU UM ERRO: </h3>: " . $sql . "<br>" . $conn->error;
+    }
+?>
