@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+            
+        <!-- Título da página (aparece na aba) -->
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Cadastro de Jogos de Interesse</h1>
+            <p id="subtitulo">Complete os campos com as informações do jogo</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form>
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+
+                <!-- Campo do nomedodesenvolvedor com legenda "nomedodesenvolvedor" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="desenvolvedor"><strong>Desenvolvedor</strong></label>
+                    <input type="text" name="desenvolvedor" id="desenvolvedor" required>
+                </div>
+            </fieldset> 
+
+            <!-- Campo de empresa com-->
+            <div class="campo">
+                <label for="empresa"><strong>Empresa</strong></label>
+                <input type="empresa" name="empresa" id="empresa" required>
+            </div>
+
+            <!-- Campo de plataforma com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+                <label><strong>Qual é a plataforma do jogo?</strong></label>
+                <label>
+                    <input type="radio" name="cadjogos" value="PC" checked>PC
+                </label>
+                <label>
+                    <input type="radio" name="cadjogos" value="mobile">Mobile
+                </label>
+                <label>
+                    <input type="radio" name="cadjogos" value="videogame">Video Game
+                </label>
+            </div>
+
+            <!-- Campo de classificação indicativa com 6 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="classificação"><strong>Classificação Indicativa</strong></label>
+                <select id="classificação" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option>L</option>
+                  <option>10</option>
+                  <option>12</option>
+                  <option>14</option>
+                  <option>16</option>
+                  <option>18</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+                <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+                <div id="check">
+                    <label><strong>Selecione o gênero do jogo:</strong></label><br><br>
+                    <input type="checkbox" id="genero1" name="genero1" value="FPS">
+                    <label for="tecnologia1"> FPS</label>
+                    <input type="checkbox" id="genero2" name="genero2" value="Battle Royale">
+                    <label for="tecnologia2"> Battle Royale</label>
+                    <input type="checkbox" id="genero3" name="genero3" value="FPA">
+                    <label for="tecnologia3"> FPA</label>
+                    <input type="checkbox" id="genero4" name="genero4" value="PVP">
+                    <label for="tecnologia4"> PVP</label>
+                    <input type="checkbox" id="genero5" name="genero5" value="RTS">
+                    <label for="tecnologia5"> RTS</label>
+                    <input type="checkbox" id="genero6" name="genero6" value="MOBA">
+                    <label for="tecnologia6"> MOBA</label>
+                    <input type="checkbox" id="genero7" name="genero7" value="RPG">
+                    <label for="tecnologia7"> RPG</label>
+                    <input type="checkbox" id="genero8" name="genero8" value="MMORPG">
+                    <label for="tecnologia8"> MMORPG</label>
+                </div>
+            </fieldset>
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br>
+                <label for="objetivo"><strong>Conte um pouco mais sobre o objetivo do jogo: </strong></label>
+                <textarea rows="6" style="width: 26em" id="objetivo" name="objetivo"></textarea>
+            </div>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+
+    </body>
+
+</html>
+
+
+
+
